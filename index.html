@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Github</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="1.png" type="image/x-icon">
-<style>
-    body {
-  font-family: 'Kanit', sans-serif;
-}
-
-</style>
+<script>
+    fetch('head.html')
+    .then(response => response.text())
+    .then(data => {
+        document.head.innerHTML += data;
+    })
+    .catch(error => console.error('Error loading head.html', error));
+</script>
 
 </head>
-<body class="bg-gray-200">
+<body class="bg-gradient-to-br from-gray-500 to-black">
+
+    <div class="min-h-screen">
+
+        <div class="flex items-center justify-center gap-6 h-full">
+            <button class="bg-gradient-to-br from-sky-300 to-sky-700 px-8 py-4 rounded-lg font-semibold text-white hover:bg-green-600 hover:scale-125 hover:-translate-y-5 transition-all duration-500 ease-in-out">
+                TD
+            </button>
+                
+            <button id="" class="bg-red-600 px-8 py-4 rounded-lg font-semibold text-white hover:bg-green-600 hover:scale-125 hover:-translate-y-5 transition-all">
+                PN
+            </button>
+
+            <button id="" class="bg-yellow-600 px-8 py-4 rounded-lg font-semibold text-white hover:bg-green-600 hover:scale-125 hover:-translate-y-5 transition-all">
+                BS
+            </button>
+
+        </div>
 
 
-    <div class="flex items-center justify-center gap-4 min-h-screen">
-        <button id="" class="bg-blue-600 px-8 py-4 rounded-lg font-semibold text-white hover:bg-blue-800 hover:scale-110 hover:-translate-y-1 transition-all">
-            TD
-        </button>
-        
-    
-        <button id="" class="bg-red-600 px-8 py-4 rounded-lg font-semibold text-white hover:bg-red-800 hover:scale-110 hover:-translate-y-1 transition-all">
-            PN
-        </button>
     </div>
     
+
 
 </body>
 </html>
