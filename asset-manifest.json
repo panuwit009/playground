@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.8bd2310b.css",
-    "main.js": "/static/js/main.aa5db85b.js",
-    "static/js/453.d3c504ca.chunk.js": "/static/js/453.d3c504ca.chunk.js",
-    "static/media/Computer-Guy-Meme--Streamline-Memes.svg": "/static/media/Computer-Guy-Meme--Streamline-Memes.4018c472b698f9f87b972bb314440a16.svg",
-    "index.html": "/index.html",
-    "main.8bd2310b.css.map": "/static/css/main.8bd2310b.css.map",
-    "main.aa5db85b.js.map": "/static/js/main.aa5db85b.js.map",
-    "453.d3c504ca.chunk.js.map": "/static/js/453.d3c504ca.chunk.js.map"
+    "main.css": "/playground/static/css/main.8bd2310b.css",
+    "main.js": "/playground/static/js/main.945c2334.js",
+    "static/js/453.d3c504ca.chunk.js": "/playground/static/js/453.d3c504ca.chunk.js",
+    "static/media/Computer-Guy-Meme--Streamline-Memes.svg": "/playground/static/media/Computer-Guy-Meme--Streamline-Memes.088420b4fba54fcbf5d2d1e6771eddbb.svg",
+    "index.html": "/playground/index.html",
+    "main.8bd2310b.css.map": "/playground/static/css/main.8bd2310b.css.map",
+    "main.945c2334.js.map": "/playground/static/js/main.945c2334.js.map",
+    "453.d3c504ca.chunk.js.map": "/playground/static/js/453.d3c504ca.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8bd2310b.css",
-    "static/js/main.aa5db85b.js"
+    "static/js/main.945c2334.js"
   ]
 }
