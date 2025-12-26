@@ -1,10 +1,27 @@
-เอาไว้เขียนเล่น/ทดสอบ
+# Playground
 
-html ไม่ได้ใช้ framework ไรเลยมีแค่ html + css, tailwind + javascript
-next.js ใช้ node เป็น runtime
-bun
+เอาไว้เขียนเล่น / ทดสอบ
 
-วิธีเปิด
-1. ติดตั้ง runtime ก่อน
+---
+
+## Tech Stack
+
+### HTML
+- ไม่ได้ใช้ framework
+- ใช้แค่ **HTML + CSS**
+- ใช้ **Tailwind CSS**
+- ใช้ **JavaScript**
+
+### Next.js
+- ใช้ **Node.js** เป็น runtime
+
+### Bun
+- ใช้เป็น runtime / package manager
+
+---
+
+## วิธีเปิดโปรเจค
+
+1. ติดตั้ง runtime ที่ต้องใช้ (Node.js หรือ Bun)
 2. ใช้ runtime ติดตั้ง package
-3. รันเลย
+3. รันโปรเจคได้เลย
