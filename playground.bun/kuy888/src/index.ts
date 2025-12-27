@@ -2,6 +2,7 @@ import { Elysia } from "elysia";
 import { staticPlugin } from '@elysiajs/static';
 
 const app = new Elysia().use(await staticPlugin({
+  assets: "public",
   prefix: '/'
 })).listen(3000);
 
