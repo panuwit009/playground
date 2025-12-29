@@ -10,12 +10,12 @@ function App() {
 
 	return (
 			<Layout pageName={pageName}>
-			<main>
-				<h2 className='font-mono font-bold text-2xl'>{count}</h2>
-				<button onClick={increase} className='bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer'>
-					เพิ่มดิ้
-				</button>
-			</main>
+				<main>
+					<h2 className='font-mono font-bold text-2xl'>{count}</h2>
+					<button onClick={increase} className='bg-blue-500 text-white px-4 py-2 rounded-md cursor-pointer'>
+						เพิ่มดิ้
+					</button>
+				</main>
 			</Layout>
 		)
 }
