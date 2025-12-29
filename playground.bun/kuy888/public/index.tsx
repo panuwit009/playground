@@ -7,6 +7,7 @@ function App() {
 	return (
 		<main className='bg-blue-50 h-dvh w-dvw flex justify-center items-center'>
 			<Counter />
+			
 		</main>
 	)
 }
