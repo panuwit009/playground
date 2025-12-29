@@ -6,8 +6,9 @@ import '@public/global.css'
 function App() {
 
 	return (
-		<main className='min-h-dvh w-dvw flex justify-end'>
-			<Login />			  
+		<main className='bg-blue-50 h-dvh w-dvw flex justify-center items-center'>
+			<Login />
+			
 		</main>
 	)
 }
