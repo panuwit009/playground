@@ -6,12 +6,6 @@
 
 ## Tech Stack
 
-### HTML
-- ไม่ได้ใช้ framework
-- ใช้แค่ **HTML + CSS**
-- ใช้ **Tailwind CSS**
-- ใช้ **JavaScript**
-
 ### Next.js
 - ใช้ **Node.js** เป็น runtime
 
@@ -24,4 +18,5 @@
 
 1. ติดตั้ง runtime ที่ต้องใช้ (Node.js หรือ Bun)
 2. ใช้ runtime ติดตั้ง package
-3. รันโปรเจคได้เลย
+3. cd ไปที่ folder project ที่ต้องการ
+4. รันโปรเจคได้เลย ( npm run dev หรือ bun dev)

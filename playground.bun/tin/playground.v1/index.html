@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Github</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="index.js"></script>
+    <script>
+        console.log('asd');
+        function gotopage(event) {
+            const data = event.target.getAttribute('data-btname');
+            const button = document.getElementById(data);
+            button.innerHTML = '<div class="spinner"></div>';
+
+            setTimeout(function() {
+                button.innerHTML = data;
+                window.location.href = 'page/' + data;
+            }, 3000);
+            
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" href="image/1.png" type="image/png">
 
