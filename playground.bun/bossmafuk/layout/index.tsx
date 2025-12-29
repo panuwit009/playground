@@ -1,9 +1,9 @@
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children, pageName }: { children: React.ReactNode; pageName?: string; }) {
   return (
     <>
     <div className="min-h-screen bg-gray-900 text-white ">
-      <Navbar />
+      <Navbar pageName={pageName}/>
       {children}
       <Footer />
       </div>
@@ -11,11 +11,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Navbar() {
+function Navbar({ pageName } : { pageName?: string }) {
   return (
-    <nav className="bg-gray-900 p-5 text-white flex gap-4 border-b border-gray-800">
+    <nav className={`bg-gray-900 p-5 text-white flex gap-4 border-b border-gray-800`}>
       {menu.map((item) => (
-        <a href={item.href}>{item.name}</a>
+        <a href={item.href}
+          className={` ${pageName === item.name && "underline"}`}
+        >
+          {item.name}
+        </a>
       ))}
     </nav>
   );

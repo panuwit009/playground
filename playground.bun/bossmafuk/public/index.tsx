@@ -1,11 +1,11 @@
-import { useState } from "react";
 import { createRoot } from "react-dom/client";
 import Layout from "../layout";
 import "../src/global.css";
 
+const pageName = "Homepage";
 function App() {
   return (
-    <Layout>
+    <Layout pageName={pageName}>
       <main>
 
 		<div className="flex justify-center">
