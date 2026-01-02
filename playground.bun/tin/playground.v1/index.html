@@ -1,92 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Github</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        console.log('asd');
-        function gotopage(event) {
-            const data = event.target.getAttribute('data-btname');
-            const button = document.getElementById(data);
-            button.innerHTML = '<div class="spinner"></div>';
+	<head>
+		<meta charset="UTF-8">
+		<title>Elysia React App</title>
 
-            setTimeout(function() {
-                button.innerHTML = data;
-                window.location.href = 'page/' + data;
-            }, 3000);
-            
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="icon" href="image/1.png" type="image/png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="tailwindcss"> 
+		<script>
+			console.log('asd');
+			function gotopage(event) {
+				const data = event.target.getAttribute('data-btname');
+				const button = document.getElementById(data);
+				button.innerHTML = '<div class="spinner"></div>';
 
-    <style>
-        body {
-            font-family: 'Kanit', sans-serif;
-        }
+				setTimeout(function() {
+					button.innerHTML = data;
+					window.location.href = 'page/' + data;
+				}, 3000);
+				
+			}
+		</script>
+		<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
+		<style>
+			body {
+				font-family: 'Kanit', sans-serif;
+			}
 
-        .spinner {
-            border: 4px solid transparent;
-            border-top: 4px solid white;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            animation: spin 1s linear infinite;
-        }
-        
-    </style>
-</head>
-<body class="bg-gradient-to-br from-gray-500 to-black">
+			@keyframes spin {
+				0% {
+					transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+				}
+			}
 
-        
-        <!-- Center the TD and PN buttons -->
-        <div class="flex items-center justify-center gap-6 min-h-screen">
-            <button 
-            id="TD" 
-            onclick="gotopage(event)" 
-            data-btname="TD" 
-
-            class="bg-gradient-to-br from-sky-300 to-sky-700 px-8 py-4 
-            rounded-lg font-semibold text-white hover:bg-green-600 
-            hover:scale-125 hover:-translate-y-5 transition-all duration-500 ease-in-out">
-                TD
-            </button>
-                
-            <button 
-            id="PN" 
-            onclick="gotopage(event)" 
-            data-btname="PN"
-
-            class="bg-red-600 px-8 py-4 rounded-lg font-semibold text-white 
-            hover:bg-green-600 hover:scale-125 hover:-translate-y-5 transition-all">
-                PN
-            </button>
-        </div>
-
-        <!-- Position the BS button at bottom-right corner -->
-        <div class="absolute bottom-6 right-6">
-            <button 
-            id="BS" 
-            onclick="gotopage(event)" 
-            data-btname="BS" 
-            
-            class="bg-yellow-600 px-8 py-4 rounded-lg font-semibold text-white 
-            hover:bg-green-600 hover:scale-125 hover:-translate-y-5 transition-all">
-                BS
-            </button>
-        </div>
-        
-
-</body>
+			.spinner {
+				border: 4px solid transparent;
+				border-top: 4px solid white;
+				border-radius: 50%;
+				width: 20px;
+				height: 20px;
+				animation: spin 1s linear infinite;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script type="module" src="./index.tsx"></script>
+	</body>
 </html>
