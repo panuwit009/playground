@@ -3,12 +3,16 @@ import { staticPlugin } from '@elysiajs/static'
 
 const app = new Elysia()
 .get("/", () => "Hello Elysia")
-.get("/:text", ({ params: { text } }) => (text) )
-
+.get("/:text", ({ params: { text } }) => `${text}` )
 .use(await staticPlugin({
   prefix: "/old",
   assets: "playground.v1"
 }))
+.use(await staticPlugin({
+  prefix: "/test",
+  assets: "testglobalstate"
+}))
+
 .listen(3000);
 
 console.log(
