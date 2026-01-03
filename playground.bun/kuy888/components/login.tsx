@@ -1,38 +1,111 @@
-export function Login() {
-    return(
-        <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8 bg-red-50">
-            <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                {/* <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" className="mx-auto h-10 w-auto" /> */}
-                <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">Login ควยไร</h2>
+type LoginProps = {
+  onSuccess: () => void
+}
+import { useNavigate } from 'react-router-dom'
+export default function Login() {
+  const navigate = useNavigate()
+
+  return (
+    <div
+      className="w-screen h-screen flex items-center justify-center overflow-hidden
+             bg-no-repeat bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/loginBG.jpg')" // เปลี่ยนเป็น path รูปพื้นหลังไม้
+      }}
+    >
+      <div className="w-[380px] rounded-[40px] bg-gray-200 px-8 py-10 shadow-lg">
+        <h2 className="text-center text-lg font-semibold mb-8">
+          ยินดีต้อนรับสู่ช่องทางการเข้าสู่ระบบ
+        </h2>
+
+            {/* Username */}
+            <div className="mb-4">
+            <label className="block text-sm text-gray-600 mb-1">
+                username
+            </label>
+            <input
+                type="text"
+                placeholder=""
+                className="
+                w-full
+                rounded-md
+                border
+                border-gray-400
+                bg-white
+                px-3
+                py-2
+                text-sm
+                focus:border-blue-500
+                focus:ring-2
+                focus:ring-blue-200
+                outline-none
+                "
+            />
             </div>
 
-            <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-                <form action="#" method="POST" className="space-y-6">
-                    <div>
-                        <div className="mt-2">
-                        <input id="email" type="email" name="email" required autoComplete="email" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                            placeholder="ผู้ใช้งานโง่ๆ"
-                        />
-                        </div>
-                    </div>
-
-                    <div>
-                        <div className="flex items-center justify-between">
-                        </div>
-                        <div className="mt-2">
-                        <input id="password" type="password" name="password" required autoComplete="current-password" className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                            placeholder="รหัสผ่านกังๆของมึงอะ"
-                        />
-                        </div>
-                    </div>
-
-                    <div>
-                        <button type="submit" className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                            เข้าไปดิเวร
-                        </button>
-                    </div>
-                </form>
+            {/* Password */}
+            <div className="mb-6">
+            <label className="block text-sm text-gray-600 mb-1">
+                password
+            </label>
+            <div className="flex items-center gap-2">
+                <input
+                type="password"
+                placeholder=""
+                className="
+                    flex-1
+                    rounded-md
+                    border
+                    border-gray-400
+                    bg-white
+                    px-3
+                    py-2
+                    text-sm
+                    focus:border-blue-500
+                    focus:ring-2
+                    focus:ring-blue-200
+                    outline-none
+                "
+                />
+                <button
+                type="button"
+                className="text-xs text-black whitespace-nowrap"
+                >
+                ลืม password
+                </button>
             </div>
+            </div>
+
+        {/* Login button */}
+        <button
+          type="button"
+          onClick={() => navigate('/home')}
+          className="w-full rounded-md bg-yellow-200 py-2 font-semibold hover:bg-yellow-300 transition"
+        >
+          login
+        </button>
+
+        {/* Register */}
+        <p className="text-center text-sm mt-4">
+          หากยังไม่ได้สมัคร คลิกที่
+        </p>
+
+        <hr className="my-4 border-gray-400" />
+
+        <p className="text-center text-sm text-gray-600 mb-3">
+          หรือเข้าสู่ระบบโดยเลือกอื่นผ่าน
+        </p>
+
+        {/* Social login */}
+        <div className="flex justify-center gap-6">
+          <button className="w-11 h-11 rounded-full bg-blue-600 text-white text-xl font-bold">
+            f
+          </button>
+          <button className="w-11 h-11 rounded-full bg-red-500 text-white text-xl font-bold">
+            G
+          </button>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
