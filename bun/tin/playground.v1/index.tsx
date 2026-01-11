@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import "@/css/global.css";
+import "../global.css";
 
 function App() {
 
