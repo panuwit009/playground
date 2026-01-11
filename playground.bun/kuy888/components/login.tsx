@@ -1,9 +1,7 @@
 type LoginProps = {
   onSuccess: () => void
 }
-import { useNavigate } from 'react-router-dom'
 export default function Login() {
-  const navigate = useNavigate()
 
   return (
     <div
@@ -77,13 +75,12 @@ export default function Login() {
             </div>
 
         {/* Login button */}
-        <button
-          type="button"
-          onClick={() => navigate('/home')}
+        <a href="/home"
+
           className="w-full rounded-md bg-yellow-200 py-2 font-semibold hover:bg-yellow-300 transition"
         >
           login
-        </button>
+        </a>
 
         {/* Register */}
         <p className="text-center text-sm mt-4">

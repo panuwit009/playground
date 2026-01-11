@@ -3,15 +3,15 @@ import { staticPlugin } from '@elysiajs/static';
 
 const app = new Elysia()
 .use(await staticPlugin({
-  assets: "public",
+  assets: "page",
   prefix: '/'
 }))
 .use(await staticPlugin({
-  assets: "public",
-  prefix: '/asd'
+  assets: "page/home",
+  prefix: '/home'
 }))
 .listen(3000);
-
+  
 console.log(
   `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
 );
