@@ -1,17 +1,17 @@
 {
-  "name": "tin",
+  "name": "bossmafuk",
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
+    "@elysiajs/html": "^1.4.0",
     "@elysiajs/static": "^1.4.7",
     "elysia": "latest",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "tailwindcss": "4",
-    "zustand": "^5.0.9"
+    "tailwindcss": "4"
   },
   "devDependencies": {
     "@types/react": "^19.2.7",
