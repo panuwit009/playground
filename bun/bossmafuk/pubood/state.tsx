@@ -3,6 +3,8 @@ import { create } from 'zustand'
 interface Bearstate {
     bears: number
     birds: string
+    lastestBears: number
+    lastestBirds: string
     increasePopulation: () => void
     removeAllBears: () => void
     updateBears: (newBears: number) => void
@@ -11,7 +13,9 @@ interface Bearstate {
 
 const useStore = create<Bearstate>	(set => ({
     bears: 0,
+    lastestBears: 0,
     birds: "None",
+    lastestBirds: "None",
     increasePopulation: () => set((state) => ({ bears: state.bears + 20 })),
     removeAllBears: () => set({ bears: 0 }),
     updateBears: (newBears) => set({ bears: newBears}),
