@@ -6,31 +6,27 @@ const menus = [
 
 ]
 
-export default function Button({ setClose }) {
-    return (
-        <div className="flex gap-3">
-            {menus.map(menu => (
-                <button
-                    key={menu.id}
-                    className="
-                        px-5 py-2
-                        rounded-xl
-                        font-semibold
-                        transition-all duration-300
-                        
-                        bg-gray-100 text-gray-700
-                        hover:bg-blue-500 hover:text-white
-                        
-                        dark:bg-indigo-600 dark:text-gray-200
-                        dark:hover:bg-indigo-700
-
-                        dark:hover:shadow-black/50
-                    "
-                >
-                    {menu.name}
-                </button>
-            ))}
-        </div>
-    )
+export default function Button() {
+  return (
+    <div className="flex items-center gap-2">
+      {menus.map(menu => (
+        <button
+          key={menu.id}
+          className="
+            px-4 py-2
+            rounded-full
+            text-sm font-medium
+            text-muted-foreground
+            hover:text-foreground
+            hover:bg-accent
+            transition-colors
+          "
+        >
+          {menu.name}
+        </button>
+      ))}
+    </div>
+  )
 }
+
 
