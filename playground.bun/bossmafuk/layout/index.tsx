@@ -15,7 +15,7 @@ function Navbar({ pageName } : { pageName?: string }) {
   return (
     <nav className={`bg-gray-900 p-5 text-white flex gap-4 border-b border-gray-800`}>
       {menu.map((item) => (
-        <a href={item.href}
+        <a href={item.href} key={item.name}
           className={` ${pageName === item.name && "underline"}`}
         >
           {item.name}
